@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { articles, getArticleBySlug } from "../../../lib/articles"
-import { tools } from "../../../lib/tools"
+import { tools, comparisons } from "../../../lib/tools"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticleBySlug(slug)
   if (!article) return {}
   return {
-    title: article.title,
+    title: `${article.title} | RunToolkit`,
     description: article.description,
     openGraph: {
       title: article.title,
@@ -91,7 +91,31 @@ export default async function BlogPostPage({ params }: Props) {
   if (!article) notFound()
 
   const relatedTools = article.relatedTools.map((s) => tools[s]).filter(Boolean)
-  const otherArticles = articles.filter((a) => a.slug !== slug).slice(0, 4)
+
+  // Find related articles — prefer articles sharing the same relatedTools, then fall back to same category
+  const relatedArticles = articles
+    .filter((a) => a.slug !== slug)
+    .map((a) => ({
+      article: a,
+      score:
+        a.relatedTools.filter((t) => article.relatedTools.includes(t)).length * 2 +
+        (a.category === article.category ? 1 : 0),
+    }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4)
+    .map((x) => x.article)
+
+  // Fallback: if no scored matches, just take 4 other articles
+  const displayedRelated =
+    relatedArticles.length > 0
+      ? relatedArticles
+      : articles.filter((a) => a.slug !== slug).slice(0, 4)
+
+  // Find comparisons that involve any of the related tools
+  const relatedComparisons = comparisons.filter(
+    (c) => article.relatedTools.includes(c.tool1) || article.relatedTools.includes(c.tool2)
+  )
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -179,20 +203,81 @@ export default async function BlogPostPage({ params }: Props) {
               does not influence our reviews or recommendations.
             </div>
 
+            {/* Related Tools — full links to review pages */}
+            {relatedTools.length > 0 && (
+              <div className="mt-10 border border-slate-200 rounded-xl p-6">
+                <h2 className="font-bold text-slate-800 mb-4 text-lg">
+                  Tools Reviewed in This Article
+                </h2>
+                <div className="space-y-4">
+                  {relatedTools.map((tool) => (
+                    <div key={tool.slug} className="flex items-center justify-between gap-4 flex-wrap">
+                      <div>
+                        <p className="font-semibold text-slate-800">{tool.name}</p>
+                        <p className="text-sm text-slate-500">{tool.tagline}</p>
+                        <p className="text-xs text-blue-600 font-medium mt-0.5">{tool.pricing}</p>
+                      </div>
+                      <div className="flex gap-2 shrink-0">
+                        <Link
+                          href={`/reviews/${tool.slug}`}
+                          className="text-sm border border-blue-300 text-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-colors font-medium"
+                        >
+                          Read Full Review
+                        </Link>
+                        <a
+                          href={tool.affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="text-sm bg-blue-600 text-white px-3 py-1.5 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                        >
+                          Try Free
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Compare pages relevant to this article */}
+            {relatedComparisons.length > 0 && (
+              <div className="mt-6 bg-slate-50 border border-slate-200 rounded-xl p-5">
+                <h3 className="font-semibold text-slate-700 mb-3 text-sm">Compare these tools:</h3>
+                <div className="flex flex-wrap gap-2">
+                  {relatedComparisons.map((c) => {
+                    const t1 = tools[c.tool1]
+                    const t2 = tools[c.tool2]
+                    return (
+                      <Link
+                        key={c.slug}
+                        href={`/compare/${c.slug}`}
+                        className="text-sm text-blue-600 border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+                      >
+                        {t1?.name} vs {t2?.name} &rarr;
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
             {/* Related articles */}
-            {otherArticles.length > 0 && (
+            {displayedRelated.length > 0 && (
               <div className="mt-10 border-t border-slate-200 pt-8">
                 <h3 className="font-bold text-slate-800 mb-4">Related Articles</h3>
                 <div className="space-y-3">
-                  {otherArticles.map((a) => (
+                  {displayedRelated.map((a) => (
                     <Link
                       key={a.slug}
                       href={`/blog/${a.slug}`}
                       className="flex items-center justify-between p-3 rounded-lg border border-slate-200 hover:border-blue-300 hover:bg-blue-50 transition-all group"
                     >
-                      <span className="text-sm font-medium text-slate-700 group-hover:text-blue-600 transition-colors">
-                        {a.title}
-                      </span>
+                      <div>
+                        <span className="text-sm font-medium text-slate-700 group-hover:text-blue-600 transition-colors block">
+                          {a.title}
+                        </span>
+                        <span className="text-xs text-slate-400">{a.category}</span>
+                      </div>
                       <span className="text-xs text-slate-400 ml-4 shrink-0">&rarr;</span>
                     </Link>
                   ))}
@@ -237,11 +322,35 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
               )}
 
+              {/* Compare links in sidebar */}
+              {relatedComparisons.length > 0 && (
+                <div className="border border-slate-200 rounded-xl p-5">
+                  <h3 className="font-bold text-slate-800 mb-3 text-sm uppercase tracking-wide">
+                    Comparisons
+                  </h3>
+                  <div className="space-y-2">
+                    {relatedComparisons.map((c) => {
+                      const t1 = tools[c.tool1]
+                      const t2 = tools[c.tool2]
+                      return (
+                        <Link
+                          key={c.slug}
+                          href={`/compare/${c.slug}`}
+                          className="block text-sm text-blue-600 hover:underline py-0.5"
+                        >
+                          {t1?.name} vs {t2?.name} &rarr;
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
               {/* CTA box */}
               <div className="bg-slate-800 text-white rounded-xl p-5 text-center">
                 <p className="font-bold mb-2">Not sure which tool is right?</p>
                 <p className="text-slate-300 text-xs mb-4 leading-relaxed">
-                  Tell us your business type and we&apos;ll point you to the best fit.
+                  Browse our picks by business type to find your best fit.
                 </p>
                 <Link
                   href="/"

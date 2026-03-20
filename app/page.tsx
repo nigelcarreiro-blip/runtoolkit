@@ -1,13 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { tools, categories } from "../lib/tools"
+import { tools, categories, comparisons, toolsList } from "../lib/tools"
+import { articles } from "../lib/articles"
 
 export const metadata: Metadata = {
-  title: "RunToolkit — Find the Best Software for Your Service Business",
+  title: "RunToolkit — Best Software for Service Businesses 2026",
   description:
     "Independent reviews and comparisons of the best software tools for service businesses. Find the right tool for cleaners, photographers, landscapers, contractors, and more.",
   openGraph: {
-    title: "RunToolkit — Find the Best Software for Your Service Business",
+    title: "RunToolkit — Best Software for Service Businesses 2026",
     description:
       "Independent reviews and comparisons of the best software tools for service businesses.",
     url: "https://runtoolkit.com",
@@ -37,6 +38,11 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function HomePage() {
   const featuredTools = [tools.jobber, tools.honeybook, tools.freshbooks]
+
+  // Recent articles — pick 4 most recent
+  const recentArticles = [...articles]
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, 4)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -92,7 +98,7 @@ export default function HomePage() {
       <section className="py-16 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 text-center mb-3">
-            What Kind of Business Do You Run?
+            Best Tools by Business Type
           </h2>
           <p className="text-slate-500 text-center mb-10 max-w-xl mx-auto">
             We&apos;ve matched the best tools to each business type so you don&apos;t have to wade through hundreds of options.
@@ -159,16 +165,68 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Link href="/reviews/jobber" className="text-blue-600 font-medium hover:underline">
-              View all reviews &rarr;
-            </Link>
+
+          {/* All reviews */}
+          <div className="mt-8 border border-slate-200 rounded-xl p-5">
+            <p className="text-sm font-semibold text-slate-600 mb-3">All tool reviews:</p>
+            <div className="flex flex-wrap gap-3">
+              {toolsList.map((tool) => (
+                <Link
+                  key={tool.slug}
+                  href={`/reviews/${tool.slug}`}
+                  className="text-sm text-blue-600 border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+                >
+                  {tool.name} Review
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compare Tools */}
+      <section className="py-16 px-4 bg-slate-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 text-center mb-3">
+            Side-by-Side Comparisons
+          </h2>
+          <p className="text-slate-500 text-center mb-10 max-w-xl mx-auto">
+            Can&apos;t decide between two tools? Read our detailed head-to-head comparisons with pricing, features, and a clear verdict.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {comparisons.map((c) => {
+              const t1 = tools[c.tool1]
+              const t2 = tools[c.tool2]
+              return (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="bg-white border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all group"
+                >
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <span className="font-bold text-slate-800 text-lg">{t1.name}</span>
+                    <span className="text-slate-400 font-medium">vs</span>
+                    <span className="font-bold text-slate-800 text-lg">{t2.name}</span>
+                  </div>
+                  <p className="text-sm text-slate-500 text-center mb-4">
+                    {t1.category === t2.category
+                      ? `Both are ${t1.category.replace("-", " ")} tools`
+                      : `${t1.category.replace("-", " ")} vs ${t2.category.replace("-", " ")}`}
+                  </p>
+                  <div className="text-center">
+                    <span className="text-sm font-medium text-blue-600 group-hover:underline">
+                      Read comparison &rarr;
+                    </span>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* How We Review */}
-      <section className="py-16 px-4 bg-slate-50">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">How We Review Software</h2>
           <p className="text-slate-500 mb-12 max-w-xl mx-auto">
@@ -203,27 +261,30 @@ export default function HomePage() {
       </section>
 
       {/* Recent Articles */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 text-center mb-3">
             From the Blog
           </h2>
+          <p className="text-slate-500 text-center mb-10 max-w-xl mx-auto">
+            In-depth guides and comparisons to help you get more from your software.
+          </p>
           <div className="space-y-4">
-            {[
-              { href: "/blog/best-crm-for-cleaning-businesses-2026", title: "Best CRM for Cleaning Businesses 2026", date: "Jan 15, 2026" },
-              { href: "/blog/honeybook-vs-bonsai-complete-comparison", title: "HoneyBook vs Bonsai: Which Is Better for Freelancers?", date: "Feb 22, 2026" },
-              { href: "/blog/bonsai-review-2026", title: "Bonsai Review 2026: Is It Worth It for Freelancers?", date: "Mar 10, 2026" },
-              { href: "/blog/best-software-independent-contractors-2026", title: "Best Software for Independent Contractors 2026", date: "Feb 15, 2026" },
-            ].map((post) => (
+            {recentArticles.map((post) => (
               <Link
-                key={post.href}
-                href={post.href}
-                className="flex items-center justify-between p-4 border border-slate-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all group"
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="flex items-center justify-between p-4 border border-slate-200 bg-white rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all group"
               >
-                <span className="font-medium text-slate-800 group-hover:text-blue-600 transition-colors">
-                  {post.title}
+                <div>
+                  <span className="font-medium text-slate-800 group-hover:text-blue-600 transition-colors block">
+                    {post.title}
+                  </span>
+                  <span className="text-xs text-slate-400 mt-0.5 block">{post.category}</span>
+                </div>
+                <span className="text-sm text-slate-400 ml-4 shrink-0">
+                  {new Date(post.publishedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
                 </span>
-                <span className="text-sm text-slate-400 ml-4 shrink-0">{post.date}</span>
               </Link>
             ))}
           </div>

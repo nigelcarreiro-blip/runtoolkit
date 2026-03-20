@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { tools, comparisons } from "../../../lib/tools"
+import { articles } from "../../../lib/articles"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -19,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tool2 = tools[comparison.tool2]
   if (!tool1 || !tool2) return {}
   return {
-    title: `${tool1.name} vs ${tool2.name} 2026: Which Is Better?`,
-    description: `${tool1.name} vs ${tool2.name} — side-by-side comparison of pricing, features, and best use cases. Find out which is right for your service business.`,
+    title: `${tool1.name} vs ${tool2.name} 2026: Which Is Better? | RunToolkit`,
+    description: `${tool1.name} vs ${tool2.name}: side-by-side comparison of pricing, features, and best use cases. Find out which is right for your service business.`,
     openGraph: {
       title: `${tool1.name} vs ${tool2.name} 2026`,
       description: `Which is better: ${tool1.name} or ${tool2.name}? Full comparison.`,
@@ -160,6 +161,16 @@ export default async function ComparePage({ params }: Props) {
   const rows = buildComparisonRows(comparison.tool1, comparison.tool2)
   const verdict = verdicts[slug]
 
+  // Other comparisons (excluding this one)
+  const otherComparisons = comparisons.filter((c) => c.slug !== slug)
+
+  // Related articles that mention either tool
+  const relatedArticles = articles
+    .filter((a) =>
+      a.relatedTools.includes(comparison.tool1) || a.relatedTools.includes(comparison.tool2)
+    )
+    .slice(0, 4)
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -216,7 +227,13 @@ export default async function ComparePage({ params }: Props) {
               <h2 className="text-xl font-bold text-slate-800 mb-2">{tool.name}</h2>
               <StarRating rating={tool.rating} />
               <p className="text-sm text-slate-600 mt-3 mb-3 leading-relaxed">{tool.tagline}</p>
-              <p className="text-sm font-semibold text-blue-600 mb-4">{tool.pricing}</p>
+              <p className="text-sm font-semibold text-blue-600 mb-3">{tool.pricing}</p>
+              <Link
+                href={`/reviews/${tool.slug}`}
+                className="inline-block w-full text-sm font-medium border border-blue-300 text-blue-600 py-1.5 rounded-lg hover:bg-blue-100 transition-colors mb-2"
+              >
+                Read {tool.name} Review
+              </Link>
               <a
                 href={tool.affiliateUrl}
                 target="_blank"
@@ -285,6 +302,14 @@ export default async function ComparePage({ params }: Props) {
                   ))}
                 </ul>
               </div>
+              <div className="mt-4 pt-4 border-t border-slate-100">
+                <Link
+                  href={`/reviews/${tool.slug}`}
+                  className="text-sm text-blue-600 font-medium hover:underline"
+                >
+                  Read our full {tool.name} review &rarr;
+                </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -337,21 +362,65 @@ export default async function ComparePage({ params }: Props) {
           </div>
         )}
 
-        {/* Other comparisons */}
-        <div className="border-t border-slate-200 pt-8">
-          <p className="text-sm text-slate-500 mb-4">More comparisons:</p>
+        {/* Read full reviews */}
+        <div className="mb-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h2 className="text-lg font-bold text-slate-800 mb-3">Read the Full Reviews</h2>
+          <p className="text-sm text-slate-600 mb-4">
+            Want a deeper dive into either tool? Read our comprehensive individual reviews with full pricing breakdowns, FAQs, and hands-on analysis.
+          </p>
           <div className="flex flex-wrap gap-3">
-            {comparisons
-              .filter((c) => c.slug !== slug)
-              .map((c) => (
+            <Link
+              href={`/reviews/${tool1.slug}`}
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 border border-blue-300 px-4 py-2 rounded-lg hover:bg-blue-100 hover:border-blue-400 transition-colors"
+            >
+              Full {tool1.name} Review &rarr;
+            </Link>
+            <Link
+              href={`/reviews/${tool2.slug}`}
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 border border-blue-300 px-4 py-2 rounded-lg hover:bg-blue-100 hover:border-blue-400 transition-colors"
+            >
+              Full {tool2.name} Review &rarr;
+            </Link>
+          </div>
+        </div>
+
+        {/* Related Articles */}
+        {relatedArticles.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-xl font-bold text-slate-800 mb-4">Related Articles</h2>
+            <div className="space-y-3">
+              {relatedArticles.map((a) => (
                 <Link
-                  key={c.slug}
-                  href={`/compare/${c.slug}`}
-                  className="text-sm text-blue-600 border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+                  key={a.slug}
+                  href={`/blog/${a.slug}`}
+                  className="flex items-center justify-between p-4 border border-slate-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all group"
                 >
-                  {c.label}
+                  <div>
+                    <span className="font-medium text-slate-800 group-hover:text-blue-600 transition-colors block">
+                      {a.title}
+                    </span>
+                    <span className="text-xs text-slate-400 mt-0.5 block">{a.category}</span>
+                  </div>
+                  <span className="text-sm text-blue-600 ml-4 shrink-0">&rarr;</span>
                 </Link>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Other comparisons */}
+        <div className="border-t border-slate-200 pt-8">
+          <p className="text-sm font-semibold text-slate-600 mb-4">Also compare:</p>
+          <div className="flex flex-wrap gap-3">
+            {otherComparisons.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/compare/${c.slug}`}
+                className="text-sm text-blue-600 border border-blue-200 px-3 py-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                {c.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

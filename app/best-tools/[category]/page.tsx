@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { tools, categories, categoryToolMap } from "../../../lib/tools"
+import { tools, categories, categoryToolMap, comparisons } from "../../../lib/tools"
+import { articles } from "../../../lib/articles"
 
 type Props = {
   params: Promise<{ category: string }>
@@ -16,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = categories.find((c) => c.slug === category)
   if (!cat) return {}
   return {
-    title: `Best Software for ${cat.label} 2026 — Top Picks Reviewed`,
-    description: `The best CRM, scheduling, and management software for ${cat.label.toLowerCase()} in 2026. Ranked and reviewed with honest pros, cons, and pricing.`,
+    title: `Best Software for ${cat.label} 2026 | RunToolkit`,
+    description: `The best CRM, scheduling, and invoicing software for ${cat.label.toLowerCase()} in 2026. Ranked and reviewed with honest pros, cons, and pricing.`,
     openGraph: {
       title: `Best Software for ${cat.label} 2026`,
       description: `Top software picks for ${cat.label.toLowerCase()} — compared and reviewed.`,
@@ -110,6 +111,16 @@ const categoryDetails: Record<string, { intro: string; considerations: string[] 
   },
 }
 
+// Map category slugs to relevant compare page slugs
+const categoryCompareMap: Record<string, string[]> = {
+  "cleaning-businesses": ["jobber-vs-housecall-pro"],
+  "photographers": ["honeybook-vs-bonsai"],
+  "landscapers": ["jobber-vs-housecall-pro"],
+  "personal-trainers": ["honeybook-vs-bonsai"],
+  "contractors": ["jobber-vs-housecall-pro"],
+  "freelancers": ["honeybook-vs-bonsai", "freshbooks-vs-bonsai"],
+}
+
 export default async function BestToolsCategoryPage({ params }: Props) {
   const { category } = await params
   const cat = categories.find((c) => c.slug === category)
@@ -118,6 +129,15 @@ export default async function BestToolsCategoryPage({ params }: Props) {
   const toolSlugs = categoryToolMap[category] || []
   const categoryTools = toolSlugs.map((slug) => tools[slug]).filter(Boolean)
   const details = categoryDetails[category]
+
+  // Find relevant compare pages for this category
+  const relatedCompareSlugs = categoryCompareMap[category] || []
+  const relatedComparisons = comparisons.filter((c) => relatedCompareSlugs.includes(c.slug))
+
+  // Find relevant blog articles — articles that mention at least one of the tools in this category
+  const relatedArticles = articles
+    .filter((a) => a.relatedTools.some((t) => toolSlugs.includes(t)))
+    .slice(0, 5)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -229,7 +249,7 @@ export default async function BestToolsCategoryPage({ params }: Props) {
                     href={`/reviews/${tool.slug}`}
                     className="flex-1 sm:flex-none text-center text-sm font-medium border border-blue-600 text-blue-600 py-2 px-5 rounded-lg hover:bg-blue-50 transition-colors"
                   >
-                    Full Review
+                    Read Full {tool.name} Review
                   </Link>
                   <a
                     href={tool.affiliateUrl}
@@ -245,6 +265,62 @@ export default async function BestToolsCategoryPage({ params }: Props) {
           ))}
         </div>
 
+        {/* Related Comparisons */}
+        {relatedComparisons.length > 0 && (
+          <div className="mb-10 border border-blue-200 bg-blue-50 rounded-xl p-6">
+            <h2 className="text-lg font-bold text-slate-800 mb-2">Compare These Tools Head-to-Head</h2>
+            <p className="text-sm text-slate-600 mb-4">
+              Not sure which tool is right for your {cat.label.toLowerCase()} business? Read our detailed side-by-side comparisons.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {relatedComparisons.map((c) => {
+                const t1 = tools[c.tool1]
+                const t2 = tools[c.tool2]
+                return (
+                  <Link
+                    key={c.slug}
+                    href={`/compare/${c.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 border border-blue-300 bg-white px-4 py-2 rounded-lg hover:bg-blue-100 hover:border-blue-400 transition-colors"
+                  >
+                    {t1?.name} vs {t2?.name} &rarr;
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Related Articles */}
+        {relatedArticles.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-xl font-bold text-slate-800 mb-4">
+              Guides for {cat.label}
+            </h2>
+            <div className="space-y-3">
+              {relatedArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/blog/${a.slug}`}
+                  className="flex items-center justify-between p-4 border border-slate-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all group"
+                >
+                  <div>
+                    <span className="font-medium text-slate-800 group-hover:text-blue-600 transition-colors block">
+                      {a.title}
+                    </span>
+                    <span className="text-xs text-slate-400 mt-0.5 block">{a.category}</span>
+                  </div>
+                  <span className="text-sm text-blue-600 ml-4 shrink-0">&rarr;</span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Link href="/blog" className="text-sm text-blue-600 hover:underline font-medium">
+                View all guides and articles &rarr;
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Browse other categories */}
         <div className="border-t border-slate-200 pt-8">
           <h3 className="font-semibold text-slate-700 mb-4">Browse Other Business Types</h3>
@@ -257,7 +333,7 @@ export default async function BestToolsCategoryPage({ params }: Props) {
                   href={`/best-tools/${c.slug}`}
                   className="text-sm text-slate-600 border border-slate-200 px-3 py-1.5 rounded-lg hover:border-blue-300 hover:text-blue-600 transition-colors"
                 >
-                  {c.icon} {c.label}
+                  {c.icon} Best Tools for {c.label}
                 </Link>
               ))}
           </div>

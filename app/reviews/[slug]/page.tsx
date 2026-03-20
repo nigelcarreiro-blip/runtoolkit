@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { tools, toolsList } from "../../../lib/tools"
+import { tools, toolsList, categories, categoryToolMap, comparisons } from "../../../lib/tools"
+import { articles } from "../../../lib/articles"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -15,9 +16,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const tool = tools[slug]
   if (!tool) return {}
+
+  // Keep description under 160 chars
+  const desc = `Our in-depth ${tool.name} review: pricing, pros & cons, and who it's best for. ${tool.tagline}. Updated March 2026.`
   return {
-    title: `${tool.name} Review 2026: Pricing, Pros & Cons, and Verdict`,
-    description: `Read our in-depth ${tool.name} review. ${tool.tagline}. ${tool.pricing}. See who it's best for, full pros and cons, and whether it's worth it.`,
+    title: `${tool.name} Review 2026: Pricing, Features & Verdict | RunToolkit`,
+    description: desc.length > 160 ? desc.slice(0, 157) + "..." : desc,
     openGraph: {
       title: `${tool.name} Review 2026`,
       description: tool.summary,
@@ -48,10 +52,58 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
+// Map tool slugs to the compare pages they appear in
+const toolCompareMap: Record<string, string[]> = {
+  jobber: ["jobber-vs-housecall-pro"],
+  housecallpro: ["jobber-vs-housecall-pro"],
+  honeybook: ["honeybook-vs-bonsai"],
+  freshbooks: ["freshbooks-vs-bonsai"],
+  bonsai: ["honeybook-vs-bonsai", "freshbooks-vs-bonsai"],
+}
+
+// Map tool bestFor values to category slugs
+const bestForToCategorySlug: Record<string, string> = {
+  landscapers: "landscapers",
+  cleaners: "cleaning-businesses",
+  "cleaning-businesses": "cleaning-businesses",
+  contractors: "contractors",
+  photographers: "photographers",
+  videographers: "photographers",
+  freelancers: "freelancers",
+  designers: "freelancers",
+  consultants: "freelancers",
+  coaches: "personal-trainers",
+  "personal-trainers": "personal-trainers",
+  plumbers: "contractors",
+  HVAC: "contractors",
+  electricians: "contractors",
+  "pest-control": "cleaning-businesses",
+  "wedding-planners": "photographers",
+}
+
 export default async function ReviewPage({ params }: Props) {
   const { slug } = await params
   const tool = tools[slug]
   if (!tool) notFound()
+
+  // Find compare pages for this tool
+  const relatedCompareslugs = toolCompareMap[slug] || []
+  const relatedComparisons = comparisons.filter((c) => relatedCompareslugs.includes(c.slug))
+
+  // Find relevant category pages based on bestFor
+  const relevantCategorySlugs = Array.from(
+    new Set(
+      tool.bestFor
+        .map((b) => bestForToCategorySlug[b])
+        .filter(Boolean)
+    )
+  )
+  const relevantCategories = categories.filter((c) => relevantCategorySlugs.includes(c.slug))
+
+  // Find related articles that mention this tool
+  const relatedArticles = articles
+    .filter((a) => a.relatedTools.includes(slug))
+    .slice(0, 4)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -90,7 +142,7 @@ export default async function ReviewPage({ params }: Props) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://runtoolkit.com" },
-      { "@type": "ListItem", position: 2, name: "Reviews", item: "https://runtoolkit.com/reviews" },
+      { "@type": "ListItem", position: 2, name: "Reviews", item: "https://runtoolkit.com/reviews/jobber" },
       { "@type": "ListItem", position: 3, name: tool.name, item: `https://runtoolkit.com/reviews/${slug}` },
     ],
   }
@@ -257,9 +309,82 @@ export default async function ReviewPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Related Comparisons */}
+        {relatedComparisons.length > 0 && (
+          <div className="mb-10 border border-slate-200 rounded-xl p-6">
+            <h2 className="text-lg font-bold text-slate-800 mb-4">
+              How Does {tool.name} Compare?
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {relatedComparisons.map((c) => {
+                const otherSlug = c.tool1 === slug ? c.tool2 : c.tool1
+                const otherTool = tools[otherSlug]
+                return (
+                  <Link
+                    key={c.slug}
+                    href={`/compare/${c.slug}`}
+                    className="inline-flex items-center gap-2 text-sm text-blue-600 border border-blue-200 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 hover:border-blue-400 transition-colors font-medium"
+                  >
+                    {tool.name} vs {otherTool?.name} &rarr;
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Best Tools For (category links) */}
+        {relevantCategories.length > 0 && (
+          <div className="mb-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h2 className="text-lg font-bold text-slate-800 mb-2">
+              Is {tool.name} Right for Your Business?
+            </h2>
+            <p className="text-slate-600 text-sm mb-4">
+              See how {tool.name} ranks alongside other top picks for your specific business type.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {relevantCategories.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/best-tools/${cat.slug}`}
+                  className="inline-flex items-center gap-2 text-sm text-slate-700 border border-slate-300 px-3 py-1.5 rounded-lg hover:border-blue-300 hover:text-blue-600 hover:bg-white transition-colors"
+                >
+                  {cat.icon} Best Tools for {cat.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Related Blog Articles */}
+        {relatedArticles.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-lg font-bold text-slate-800 mb-4">
+              Articles Featuring {tool.name}
+            </h2>
+            <div className="space-y-3">
+              {relatedArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/blog/${a.slug}`}
+                  className="flex items-center justify-between p-4 border border-slate-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all group"
+                >
+                  <div>
+                    <span className="font-medium text-slate-800 group-hover:text-blue-600 transition-colors block">
+                      {a.title}
+                    </span>
+                    <span className="text-xs text-slate-400 mt-0.5 block">{a.category}</span>
+                  </div>
+                  <span className="text-sm text-blue-600 ml-4 shrink-0">&rarr;</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Nav to other reviews */}
         <div className="border-t border-slate-200 pt-8">
-          <p className="text-sm text-slate-500 mb-4">Compare {tool.name} with other tools:</p>
+          <p className="text-sm text-slate-500 mb-4">Read reviews of other tools:</p>
           <div className="flex flex-wrap gap-3">
             {toolsList
               .filter((t) => t.slug !== slug)
