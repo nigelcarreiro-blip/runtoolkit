@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -23,6 +24,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-T1BXCKTKYY" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-T1BXCKTKYY');
+        `}</Script>
+      </head>
       <body className="min-h-screen flex flex-col bg-white text-slate-800">
         <header className="border-b border-slate-200 bg-white sticky top-0 z-50">
           <nav className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">

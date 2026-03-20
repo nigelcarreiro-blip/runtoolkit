@@ -156,7 +156,7 @@ export const tools: Record<string, Tool> = {
     slug: "housecallpro",
     tagline: "All-in-one software for home service businesses",
     rating: 4.7,
-    affiliateUrl: "HOUSECALL_PRO_AFFILIATE_URL",
+    affiliateUrl: "https://www.housecallpro.com",
     logo: "/logos/housecallpro.svg",
     category: "field-service",
     pricing: "Starting at $49/month",
