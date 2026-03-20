@@ -114,36 +114,36 @@ const verdicts: Record<string, { summary: string; chooseFirst: string[]; chooseS
       "You want postcard marketing to past customers",
     ],
   },
-  "honeybook-vs-dubsado": {
+  "honeybook-vs-bonsai": {
     summary:
-      "HoneyBook and Dubsado both serve creative freelancers, photographers, and designers. HoneyBook is more polished and easier to set up. Dubsado offers more customization and workflow flexibility at a lower price point.",
+      "HoneyBook and Bonsai both serve creative freelancers but with different strengths. HoneyBook has more powerful automation workflows and a more polished client experience. Bonsai has built-in time tracking, tax tools, and great contract templates — and is easier to set up.",
     chooseFirst: [
-      "You want something beautiful and ready immediately",
-      "Client-facing polish matters to your brand",
-      "You prefer guided onboarding and fewer setup decisions",
-      "You need strong integrations with other tools",
+      "You want powerful automation workflows",
+      "Client-facing polish is important to your brand",
+      "You're a photographer or wedding planner with a complex client process",
+      "You need scheduling built in",
     ],
     chooseSecond: [
-      "You want maximum control over your workflow",
-      "You're price-conscious ($20/month vs $39/month)",
-      "You want more complex, multi-step automations",
-      "You're comfortable investing time in the initial setup",
+      "You bill by the hour and need time tracking built in",
+      "You want a fast setup with minimal configuration",
+      "Tax estimation tools are valuable to you",
+      "You're a designer, consultant, or coach who wants an all-in-one freelancer tool",
     ],
   },
-  "jobber-vs-dubsado": {
+  "freshbooks-vs-bonsai": {
     summary:
-      "Jobber and Dubsado serve different types of service businesses. Jobber is purpose-built for field service companies (landscaping, cleaning, HVAC). Dubsado is designed for creative freelancers and project-based businesses. Choose based on your business type.",
+      "FreshBooks and Bonsai both target freelancers but serve different needs. FreshBooks is primarily an accounting and invoicing tool with strong expense tracking and reporting. Bonsai is a client management tool that covers contracts, proposals, invoicing, and time tracking.",
     chooseFirst: [
-      "You run a field service business with crews going to job sites",
-      "You need scheduling, dispatching, and GPS tracking",
-      "Your work is recurring (weekly cleanings, lawn maintenance)",
-      "You need to manage multiple employees in the field",
+      "You want strong accounting features — P&L reports, expense tracking",
+      "You connect to your bank account for automatic transaction import",
+      "Your primary need is professional invoicing and tax prep",
+      "You have a bookkeeper who needs access to clean financial records",
     ],
     chooseSecond: [
-      "You're a freelancer, photographer, designer, or coach",
-      "Your work involves proposals, contracts, and project phases",
-      "Client relationship management is more important than dispatching",
-      "You want powerful workflow automation at a low price",
+      "You need contracts and e-signatures alongside invoicing",
+      "You want a full client portal for document sharing",
+      "You bill by the hour and need integrated time tracking",
+      "You're just starting out and want one tool that covers everything",
     ],
   },
 }

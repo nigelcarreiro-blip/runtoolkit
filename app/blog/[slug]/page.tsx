@@ -47,10 +47,9 @@ function renderContent(content: string): string {
   return content
     .replace(/\[([^\]]+)\]\(JOBBER_AFFILIATE_URL\)/g, '<a href="https://getjobber.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
     .replace(/\[([^\]]+)\]\(HONEYBOOK_AFFILIATE_URL\)/g, '<a href="https://www.honeybook.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
-    .replace(/\[([^\]]+)\]\(DUBSADO_AFFILIATE_URL\)/g, '<a href="https://www.dubsado.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
-    .replace(/\[([^\]]+)\]\(HOUSECALL_PRO_AFFILIATE_URL\)/g, '<a href="https://www.housecallpro.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
-    .replace(/\[([^\]]+)\]\(ACUITY_AFFILIATE_URL\)/g, '<a href="https://acuityscheduling.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
-    .replace(/\[([^\]]+)\]\(17HATS_AFFILIATE_URL\)/g, '<a href="https://www.17hats.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
+.replace(/\[([^\]]+)\]\(HOUSECALL_PRO_AFFILIATE_URL\)/g, '<a href="https://www.housecallpro.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
+    .replace(/\[([^\]]+)\]\(FRESHBOOKS_AFFILIATE_URL\)/g, '<a href="https://www.freshbooks.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
+    .replace(/\[([^\]]+)\]\(BONSAI_AFFILIATE_URL\)/g, '<a href="https://www.hellobonsai.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline underline-offset-2 hover:text-blue-800">$1</a>')
 }
 
 function parseMarkdownToHtml(md: string): string {

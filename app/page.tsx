@@ -36,7 +36,7 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default function HomePage() {
-  const featuredTools = [tools.jobber, tools.honeybook, tools.acuity]
+  const featuredTools = [tools.jobber, tools.honeybook, tools.freshbooks]
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -211,9 +211,9 @@ export default function HomePage() {
           <div className="space-y-4">
             {[
               { href: "/blog/best-crm-for-cleaning-businesses-2026", title: "Best CRM for Cleaning Businesses 2026", date: "Jan 15, 2026" },
-              { href: "/blog/honeybook-vs-dubsado-complete-comparison", title: "HoneyBook vs Dubsado: The Complete Comparison", date: "Feb 22, 2026" },
+              { href: "/blog/honeybook-vs-bonsai-complete-comparison", title: "HoneyBook vs Bonsai: Which Is Better for Freelancers?", date: "Feb 22, 2026" },
+              { href: "/blog/bonsai-review-2026", title: "Bonsai Review 2026: Is It Worth It for Freelancers?", date: "Mar 10, 2026" },
               { href: "/blog/best-software-independent-contractors-2026", title: "Best Software for Independent Contractors 2026", date: "Feb 15, 2026" },
-              { href: "/blog/automate-scheduling-personal-trainers", title: "How to Automate Scheduling for Personal Trainers", date: "Feb 8, 2026" },
             ].map((post) => (
               <Link
                 key={post.href}

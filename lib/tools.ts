@@ -151,68 +151,6 @@ export const tools: Record<string, Tool> = {
       },
     ],
   },
-  dubsado: {
-    name: "Dubsado",
-    slug: "dubsado",
-    tagline: "CRM and workflow automation for freelancers and service businesses",
-    rating: 4.5,
-    affiliateUrl: "DUBSADO_AFFILIATE_URL",
-    logo: "/logos/dubsado.svg",
-    category: "crm",
-    pricing: "Starting at $20/month",
-    pricingTiers: [
-      {
-        name: "Starter",
-        price: "$20/month",
-        features: ["3 clients", "Unlimited projects", "Contracts", "Invoices"],
-      },
-      {
-        name: "Premier",
-        price: "$40/month",
-        features: ["Unlimited clients", "Automations", "Scheduler", "Payment plans", "Lead capture"],
-      },
-    ],
-    bestFor: ["photographers", "designers", "coaches", "virtual-assistants", "freelancers", "consultants"],
-    pros: [
-      "Highly customizable forms and workflows",
-      "Unlimited projects on all plans",
-      "Strong lead capture and pipeline management",
-      "Branded client portal",
-      "Flexible payment plans and schedules",
-      "Lifetime deal often available",
-    ],
-    cons: [
-      "Interface can feel dated compared to competitors",
-      "Steeper learning curve to set up initially",
-      "No native time tracking",
-    ],
-    summary:
-      "Dubsado is the power-user's CRM. If you're willing to invest time in setup, you'll get an incredibly customized client management system. It's particularly popular with photographers, designers, and coaches who want complete control over their workflow.",
-    fullDescription:
-      "Dubsado positions itself as the most flexible CRM for creative freelancers, and it largely delivers on that promise. Unlike HoneyBook's more opinionated approach, Dubsado lets you build your client workflow almost from scratch — which means endless customization but also a steeper setup curve.\n\nThe canned emails, form builder, and workflow automation are the heart of the platform. You can create multi-step workflows that automatically send emails, assign tasks, request signatures, and collect payments based on triggers you define. Once configured, these workflows make your business feel like it runs itself.\n\nDubsado's client portal gives each client a branded space to view their project, sign contracts, pay invoices, and fill out questionnaires. It creates a professional impression even for solo freelancers just starting out.",
-    faqs: [
-      {
-        question: "How does Dubsado compare to HoneyBook?",
-        answer:
-          "Dubsado offers more customization and flexibility, while HoneyBook is more polished out of the box. If you want full control and don't mind setup time, choose Dubsado. If you want something that looks great immediately, choose HoneyBook.",
-      },
-      {
-        question: "Can I try Dubsado for free?",
-        answer:
-          "Yes. Dubsado offers a free plan limited to 3 clients — enough to fully test the platform before upgrading.",
-      },
-      {
-        question: "Does Dubsado have scheduling built in?",
-        answer:
-          "Yes. Dubsado includes a scheduler on the Premier plan that lets clients book appointments based on your availability.",
-      },
-      {
-        question: "Is Dubsado good for photographers?",
-        answer:
-          "Dubsado is very popular among photographers for its workflow automation, contract and questionnaire tools, and payment scheduling features.",
-      },
-    ],
-  },
   housecallpro: {
     name: "Housecall Pro",
     slug: "housecallpro",
@@ -280,136 +218,137 @@ export const tools: Record<string, Tool> = {
       },
     ],
   },
-  "17hats": {
-    name: "17hats",
-    slug: "17hats",
-    tagline: "Business management software for small service businesses",
-    rating: 4.3,
-    affiliateUrl: "17HATS_AFFILIATE_URL",
-    logo: "/logos/17hats.svg",
-    category: "business-management",
-    pricing: "Starting at $45/month",
+  freshbooks: {
+    name: "FreshBooks",
+    slug: "freshbooks",
+    tagline: "Accounting and invoicing software built for small service businesses",
+    rating: 4.6,
+    affiliateUrl: "FRESHBOOKS_AFFILIATE_URL",
+    logo: "/logos/freshbooks.svg",
+    category: "accounting",
+    pricing: "Starting at $19/month",
     pricingTiers: [
       {
-        name: "Solo",
-        price: "$45/month",
-        features: ["1 user", "Contracts", "Invoices", "Questionnaires", "Workflows"],
+        name: "Lite",
+        price: "$19/month",
+        features: ["5 clients", "Invoicing", "Expense tracking", "Time tracking"],
       },
       {
-        name: "Starting Out",
-        price: "$499/year",
-        features: ["All Solo features", "1,000 contacts", "Email marketing", "Lead pipeline"],
+        name: "Plus",
+        price: "$33/month",
+        features: ["50 clients", "Proposals", "Automations", "Bank reconciliation"],
       },
       {
-        name: "Bookkeeper",
-        price: "$699/year",
-        features: ["Everything", "Bookkeeping reports", "P&L statements", "Expense tracking"],
+        name: "Premium",
+        price: "$60/month",
+        features: ["Unlimited clients", "Project profitability", "Advanced reporting"],
       },
     ],
-    bestFor: ["photographers", "event-planners", "designers", "coaches", "consultants", "solo-freelancers"],
+    bestFor: ["photographers", "freelancers", "contractors", "landscapers", "coaches", "cleaning-businesses"],
     pros: [
-      "Strong bookkeeping and accounting features",
-      "All-in-one: CRM, contracts, invoices, and bookkeeping",
-      "Good workflow automation",
-      "Questionnaire builder",
-      "Solid email templates",
+      "Clean, easy-to-use invoicing interface",
+      "Built-in time tracking for hourly billing",
+      "Expense tracking with receipt capture",
+      "Profit and loss reports",
+      "Automatic payment reminders",
+      "Integrates with 100+ apps including Stripe and PayPal",
     ],
     cons: [
-      "Interface feels older than competitors",
-      "Limited to smaller teams",
-      "Less polished client-facing experience",
+      "Not a field service tool — no scheduling or dispatching",
+      "Client limit on lower tiers",
+      "No contracts or proposals on Lite plan",
     ],
     summary:
-      "17hats is a solid choice for solo service providers who want CRM, contracts, invoices, and basic bookkeeping in one tool. It's particularly valued by freelancers who also need expense tracking and profit/loss reports.",
+      "FreshBooks is the go-to invoicing and accounting tool for service business owners who bill by project or hour. It combines professional invoicing, expense tracking, and time tracking in a clean interface that doesn't require an accounting degree to understand.",
     fullDescription:
-      "17hats has been around longer than most of its competitors, and it shows both in its deep feature set and its somewhat dated interface. That said, it remains a practical choice for solo freelancers who want everything under one roof — especially those who also need bookkeeping.\n\nWhile Dubsado and HoneyBook focus on client experience, 17hats takes a more business-management-oriented approach. The bookkeeping features let you track income, expenses, and generate profit and loss reports — functionality that normally requires a separate tool like Wave or QuickBooks.\n\nFor photographers, event planners, and consultants who want a single subscription that covers CRM, contracts, invoicing, and financials, 17hats remains a compelling option despite stiffer competition in recent years.",
+      "FreshBooks has built its reputation on making accounting approachable for non-accountants. If you run a photography business, landscaping company, or any service business where you bill clients for time or projects, FreshBooks handles the financial side so you can focus on the work.\n\nThe invoicing experience is FreshBooks' standout feature. Create a professional invoice in under a minute, send it directly to the client, and let FreshBooks handle follow-up reminders if payment is late. Clients can pay online by credit card or bank transfer, and funds are deposited to your account within a few days.\n\nTime tracking is built directly into the platform — start a timer when you begin work, stop it when you're done, and add the hours to an invoice with one click. For photographers who charge for editing hours, or landscapers who bill hourly for smaller jobs, this eliminates the need for a separate time tracking app.\n\nThe expense tracking feature connects to your bank account and automatically imports transactions. You categorize them as business expenses, and FreshBooks generates profit and loss reports that give you a real picture of your business finances — useful at tax time and for understanding where your money is going.",
     faqs: [
       {
-        question: "Does 17hats have a mobile app?",
+        question: "Is FreshBooks good for photographers?",
         answer:
-          "17hats has a mobile app for iOS and Android that lets you manage leads, send invoices, and view your calendar on the go.",
+          "Yes. FreshBooks is popular with photographers for its clean invoicing, payment scheduling, and time tracking. Many photographers use it to track editing hours and create professional-looking invoices for clients.",
       },
       {
-        question: "Is 17hats good for photographers?",
+        question: "Does FreshBooks replace a bookkeeper?",
         answer:
-          "Yes. 17hats is popular with photographers for its contract, questionnaire, and workflow features. The bookkeeping tools are a bonus for those who want to avoid a separate accounting subscription.",
+          "FreshBooks significantly reduces the work a bookkeeper needs to do by keeping your income and expenses organized. Many small service businesses use FreshBooks to handle day-to-day accounting and bring in a bookkeeper only for annual tax prep.",
       },
       {
-        question: "How does 17hats compare to Dubsado?",
+        question: "Can clients pay invoices through FreshBooks?",
         answer:
-          "Both serve similar audiences. Dubsado has more automation flexibility and a better client portal. 17hats has stronger built-in bookkeeping. If accounting features matter, consider 17hats.",
+          "Yes. FreshBooks accepts credit cards and ACH bank transfers directly through invoices. Clients click a 'Pay Now' button and funds are deposited to your bank account within 2–5 days.",
       },
       {
-        question: "Does 17hats offer a free trial?",
+        question: "Is there a FreshBooks free trial?",
         answer:
-          "17hats offers a 7-day free trial.",
+          "FreshBooks offers a 30-day free trial with no credit card required — one of the longer trials in the category.",
       },
     ],
   },
-  acuity: {
-    name: "Acuity Scheduling",
-    slug: "acuity",
-    tagline: "Online scheduling software that makes booking effortless",
-    rating: 4.7,
-    affiliateUrl: "ACUITY_AFFILIATE_URL",
-    logo: "/logos/acuity.svg",
-    category: "scheduling",
-    pricing: "Starting at $20/month",
+  bonsai: {
+    name: "Bonsai",
+    slug: "bonsai",
+    tagline: "All-in-one business management for freelancers — contracts, invoices, and time tracking",
+    rating: 4.5,
+    affiliateUrl: "BONSAI_AFFILIATE_URL",
+    logo: "/logos/bonsai.svg",
+    category: "freelance-management",
+    pricing: "Starting at $25/month",
     pricingTiers: [
       {
-        name: "Emerging",
-        price: "$20/month",
-        features: ["1 calendar", "Unlimited appointments", "Custom forms", "Payment processing"],
+        name: "Starter",
+        price: "$25/month",
+        features: ["Contracts", "Invoices", "Proposals", "Time tracking"],
       },
       {
-        name: "Growing",
-        price: "$34/month",
-        features: ["6 calendars", "Text reminders", "Group classes", "Subscriptions"],
+        name: "Professional",
+        price: "$39/month",
+        features: ["Everything + client portal", "Subcontractors", "Multiple currencies"],
       },
       {
-        name: "Powerhouse",
-        price: "$61/month",
-        features: ["36 calendars", "Multiple locations", "Custom API", "Removal of Acuity branding"],
+        name: "Business",
+        price: "$79/month",
+        features: ["Everything + multiple team members", "Accountant access"],
       },
     ],
-    bestFor: ["personal-trainers", "coaches", "therapists", "photographers", "tutors", "consultants", "salons"],
+    bestFor: ["photographers", "designers", "coaches", "freelancers", "consultants", "personal-trainers"],
     pros: [
-      "Extremely easy for clients to self-book",
-      "Syncs with Google, Outlook, and iCal",
-      "Automated email and SMS reminders",
-      "Accepts payment at booking via Stripe or PayPal",
-      "Group classes and packages",
-      "Integrates with Zoom for virtual sessions",
+      "Beautiful, modern contract and proposal templates",
+      "Integrated time tracking and invoicing",
+      "Client portal for document signing and payments",
+      "Automated payment reminders",
+      "Project tracking and task management",
+      "Tax estimation tools built in",
     ],
     cons: [
-      "Not a full CRM — scheduling-focused only",
-      "Customization is limited on lower plans",
-      "No built-in contracts or proposals",
+      "Not designed for field service businesses",
+      "Fewer integrations than HoneyBook",
+      "Less powerful automation workflows than some competitors",
     ],
     summary:
-      "Acuity Scheduling is the most client-friendly online booking tool available. Personal trainers, coaches, and therapists love it because clients can self-book 24/7, pay a deposit or full amount at booking, and receive automatic reminders — all without any manual effort.",
+      "Bonsai is the all-in-one solution for freelancers who want contracts, invoicing, and time tracking in one clean platform. It's particularly popular with designers, photographers, and coaches who want a professional client experience without the learning curve of more complex tools.",
     fullDescription:
-      "Acuity Scheduling (owned by Squarespace) focuses entirely on one thing: making it easy for clients to book time with you. And it does that better than almost anything else on the market.\n\nThe booking page is clean, fast, and works on any device. Clients choose the service type, see your real-time availability, pick a time, fill out any intake forms you require, and pay — all in a few clicks. You get notified, and both of you receive calendar invites automatically.\n\nFor personal trainers, the package feature is particularly valuable. Sell a 10-session pack, and Acuity tracks how many sessions the client has used. Classes and group bookings work similarly, making it useful for yoga studios, boot camps, and group coaching programs.\n\nAcuity doesn't try to be a full CRM, and that focus is its strength. If you need contracts and workflows on top of scheduling, pair it with HoneyBook or Dubsado.",
+      "Bonsai was built specifically for freelancers, and it shows. Every feature in the platform is designed around the freelancer workflow: win a client, send a contract, track your time, send an invoice, get paid. It handles that loop better than almost anything else on the market.\n\nThe contract templates are a standout. Bonsai includes professionally drafted contracts for dozens of freelance niches — photographers, designers, consultants, coaches — so you're not starting from a blank document or paying a lawyer for a basic agreement. Clients sign electronically and receive a copy automatically.\n\nTime tracking is baked directly into projects. Start a timer when you begin work, and Bonsai tracks it against the project budget. When it's time to invoice, your hours convert to billable items with one click.\n\nBonsai's tax features are surprisingly useful for freelancers who hate tax season. The platform estimates your quarterly tax obligations based on your income and automatically sets aside the appropriate percentage — so you're not scrambling to cover a surprise tax bill in April.\n\nFor freelancers who want a polished client experience without spending hours on setup, Bonsai is one of the easiest platforms to get running quickly.",
     faqs: [
       {
-        question: "Is Acuity good for personal trainers?",
+        question: "Is Bonsai good for photographers?",
         answer:
-          "Acuity is one of the best scheduling tools for personal trainers. Session packages, payment collection at booking, intake forms, and automatic reminders make it ideal for trainers working with multiple clients.",
+          "Yes. Bonsai is popular with photographers for its contract templates, invoice automation, and client portal. Many photographers appreciate the pre-built photography contract templates that are legally sound and ready to customize.",
       },
       {
-        question: "Can Acuity handle group classes?",
+        question: "Does Bonsai have time tracking?",
         answer:
-          "Yes. Acuity supports group classes with a maximum participant limit, making it suitable for fitness studios, yoga teachers, and group coaching.",
+          "Yes. Bonsai includes built-in time tracking that ties directly to projects and invoices. Start a timer when you begin work and convert tracked hours to an invoice with one click.",
       },
       {
-        question: "Does Acuity integrate with Zoom?",
+        question: "Can clients sign contracts in Bonsai?",
         answer:
-          "Yes. Acuity automatically generates a unique Zoom link for each virtual appointment and includes it in the confirmation email.",
+          "Yes. Bonsai includes e-signature functionality. Clients receive a link to review and sign the contract electronically, and both parties receive a PDF copy after signing.",
       },
       {
-        question: "Is there a free version of Acuity?",
+        question: "Is there a Bonsai free trial?",
         answer:
-          "Acuity no longer offers a permanent free plan, but it does offer a 7-day free trial.",
+          "Bonsai offers a 14-day free trial with no credit card required.",
       },
     ],
   },
@@ -431,16 +370,16 @@ export const categories = [
 ]
 
 export const categoryToolMap: Record<string, string[]> = {
-  "cleaning-businesses": ["jobber", "housecallpro", "acuity"],
-  "photographers": ["honeybook", "dubsado", "17hats", "acuity"],
-  "landscapers": ["jobber", "housecallpro"],
-  "personal-trainers": ["acuity", "honeybook", "dubsado"],
-  "contractors": ["jobber", "housecallpro"],
-  "freelancers": ["dubsado", "honeybook", "17hats", "acuity"],
+  "cleaning-businesses": ["jobber", "housecallpro", "freshbooks"],
+  "photographers": ["honeybook", "freshbooks", "bonsai"],
+  "landscapers": ["jobber", "housecallpro", "freshbooks"],
+  "personal-trainers": ["honeybook", "bonsai"],
+  "contractors": ["jobber", "housecallpro", "freshbooks"],
+  "freelancers": ["honeybook", "freshbooks", "bonsai"],
 }
 
 export const comparisons = [
   { slug: "jobber-vs-housecall-pro", tool1: "jobber", tool2: "housecallpro", label: "Jobber vs Housecall Pro" },
-  { slug: "honeybook-vs-dubsado", tool1: "honeybook", tool2: "dubsado", label: "HoneyBook vs Dubsado" },
-  { slug: "jobber-vs-dubsado", tool1: "jobber", tool2: "dubsado", label: "Jobber vs Dubsado" },
+  { slug: "honeybook-vs-bonsai", tool1: "honeybook", tool2: "bonsai", label: "HoneyBook vs Bonsai" },
+  { slug: "freshbooks-vs-bonsai", tool1: "freshbooks", tool2: "bonsai", label: "FreshBooks vs Bonsai" },
 ]

@@ -20,7 +20,7 @@ export const articles: Article[] = [
     updatedAt: "2026-03-01",
     author: "RunToolkit Editorial Team",
     category: "Best Tools",
-    relatedTools: ["jobber", "housecallpro", "acuity"],
+    relatedTools: ["jobber", "housecallpro", "freshbooks"],
     content: `Running a cleaning business is harder than it looks. You're managing recurring appointments, tracking which homes need which supplies, handling client communications, collecting payments, and trying to grow your client list — all at the same time. Without the right software, even a 10-client roster can feel overwhelming.
 
 The good news: there are purpose-built tools that handle all of this automatically. Here's what we've found to be the best CRM and business management software for cleaning businesses in 2026.
@@ -45,11 +45,15 @@ Housecall Pro starts at **$49/month** and includes a 14-day free trial.
 
 **Best for:** Solo cleaners and small teams who want something simple to get started
 
-## 3. Acuity Scheduling — Best for Solo Cleaners
+## 3. FreshBooks — Best for Invoicing and Expense Tracking
 
-If you run a one-person cleaning business and primarily need a booking system rather than full dispatch software, [Acuity Scheduling](ACUITY_AFFILIATE_URL) at **$20/month** is an affordable and effective option. Clients can book their sessions online, pay a deposit at booking, and receive automatic reminders — without you lifting a finger.
+[FreshBooks](FRESHBOOKS_AFFILIATE_URL) is the right tool if your primary pain point is the financial side of your cleaning business rather than scheduling and dispatching. It makes professional invoicing effortless — create and send an invoice in under a minute, accept credit cards and bank transfers online, and let automatic payment reminders handle late invoices.
 
-Acuity doesn't offer routing or GPS tracking like Jobber or Housecall Pro, but for a solo cleaner who just needs to fill their calendar and collect payment, it's more than enough.
+FreshBooks also tracks your business expenses, connects to your bank account, and generates profit and loss reports — so you have a clear picture of what your cleaning business is actually earning after supplies, fuel, and labor.
+
+FreshBooks starts at **$19/month** with a 30-day free trial.
+
+**Best for:** Solo cleaners who want polished invoicing and a clear picture of business finances
 
 ## What Features Matter Most for Cleaning Businesses?
 
@@ -65,7 +69,7 @@ When evaluating software for your cleaning business, prioritize these capabiliti
 
 ## Bottom Line
 
-For most cleaning businesses, [Jobber](JOBBER_AFFILIATE_URL) offers the best combination of features at a reasonable price. If you're just starting out and want something simpler, [Housecall Pro](HOUSECALL_PRO_AFFILIATE_URL) is an easier entry point. Solo cleaners focused purely on booking should consider [Acuity Scheduling](ACUITY_AFFILIATE_URL).
+For most cleaning businesses, [Jobber](JOBBER_AFFILIATE_URL) offers the best combination of features at a reasonable price. If you're just starting out and want something simpler, [Housecall Pro](HOUSECALL_PRO_AFFILIATE_URL) is an easier entry point. For cleaners who primarily need better invoicing and financial tracking, [FreshBooks](FRESHBOOKS_AFFILIATE_URL) is worth a look.
 
 All three offer free trials, so the best approach is to try your top choice for a couple of weeks and see how it fits your workflow.`,
   },
@@ -136,7 +140,7 @@ Both tools offer 14-day free trials. The best advice: sign up for whichever appe
     updatedAt: "2026-03-10",
     author: "RunToolkit Editorial Team",
     category: "Best Tools",
-    relatedTools: ["honeybook", "dubsado", "17hats"],
+    relatedTools: ["honeybook", "freshbooks", "bonsai"],
     content: `As a freelance photographer, you're already juggling shoots, editing, client communication, and equipment maintenance. The last thing you want is to spend evenings building invoices in Google Docs and chasing down late payments. The right invoicing tool handles all of that for you — automatically.
 
 Here's what we've found to be the best invoicing software for photographers in 2026.
@@ -151,21 +155,19 @@ The automation workflows are where HoneyBook really shines for photographers. Se
 
 HoneyBook starts at **$19/month** and offers a 7-day free trial.
 
-## 2. Dubsado — Best for Customization
+## 2. FreshBooks — Best for Invoicing and Expense Tracking
 
-[Dubsado](DUBSADO_AFFILIATE_URL) is the choice for photographers who want complete control over how their business runs. You can customize every form, email template, and workflow to match your brand and process exactly.
+[FreshBooks](FRESHBOOKS_AFFILIATE_URL) is the simplest way to handle the financial side of your photography business. Create professional invoices in seconds, accept online payments, track your editing hours, and capture expenses with your phone camera.
 
-The invoicing system supports payment plans, split payments, and automatic payment reminders. If you take a 50% deposit at booking and the balance 7 days before delivery, Dubsado handles that schedule automatically.
+Unlike HoneyBook, FreshBooks doesn't try to manage your entire client workflow — it focuses on the money side, which means the invoicing and accounting features are deeper and more polished.
 
-The learning curve is steeper than HoneyBook, but once you've set it up, it runs smoothly. Dubsado starts at **$20/month** for the Premier plan (unlimited clients), and they frequently run promotions.
+FreshBooks starts at **$19/month** and offers a 30-day free trial.
 
-## 3. 17hats — Best for Photographers Who Need Bookkeeping
+## 3. Bonsai — Best for Contracts + Invoicing Combined
 
-[17hats](17HATS_AFFILIATE_URL) takes a more business-management approach, adding income tracking, expense logging, and profit/loss reports alongside the standard invoicing and contract tools.
+[Bonsai](BONSAI_AFFILIATE_URL) is built specifically for freelancers and includes professional photography contract templates, online signing, invoicing, and time tracking in one place. If you want a polished client experience — from first contract to final invoice — without the learning curve of HoneyBook, Bonsai is worth a look.
 
-If you're tired of maintaining both a CRM and a separate bookkeeping tool like Wave, 17hats consolidates them. The interface is less polished than HoneyBook or Dubsado, but the feature depth is impressive.
-
-17hats starts at **$45/month** or **$499/year**.
+Bonsai starts at **$25/month** with a 14-day free trial.
 
 ## What Makes a Good Invoicing Tool for Photographers?
 
@@ -175,81 +177,86 @@ If you're tired of maintaining both a CRM and a separate bookkeeping tool like W
 
 **Contract integration** — Sending an invoice separately from a contract adds friction. The best tools combine them.
 
-**Automatic reminders** — Late payment reminders shouldn't require you to write a awkward email. Automation handles it professionally.
+**Automatic reminders** — Late payment reminders shouldn't require you to write an awkward email. Automation handles it professionally.
 
 **Branded experience** — Your invoices, contracts, and proposals should look like they came from a professional studio, not a generic template.
 
 ## Bottom Line
 
-For most photographers, [HoneyBook](HONEYBOOK_AFFILIATE_URL) hits the best balance of polish, ease of use, and features. Power users who want more customization should consider [Dubsado](DUBSADO_AFFILIATE_URL). If bookkeeping integration matters, look at [17hats](17HATS_AFFILIATE_URL).`,
+For most photographers, [HoneyBook](HONEYBOOK_AFFILIATE_URL) hits the best balance of polish, ease of use, and features. If invoicing and expense tracking are your main needs, [FreshBooks](FRESHBOOKS_AFFILIATE_URL) is a focused alternative. For contracts plus invoicing in one freelancer-focused platform, [Bonsai](BONSAI_AFFILIATE_URL) is worth a look.`,
   },
   {
     slug: "automate-scheduling-personal-trainers",
-    title: "How to Automate Scheduling for Personal Trainers",
+    title: "How to Manage Clients as a Personal Trainer",
     description:
-      "Stop spending time on scheduling logistics and spend more time training clients. Here's how to automate your booking, reminders, and payments as a personal trainer.",
+      "Stop spending time on admin and spend more time training clients. Here's how to manage scheduling, contracts, and payments as a personal trainer using the right tools.",
     publishedAt: "2026-02-08",
-    updatedAt: "2026-03-12",
+    updatedAt: "2026-03-20",
     author: "RunToolkit Editorial Team",
     category: "Guides",
-    relatedTools: ["acuity", "honeybook"],
-    content: `Every hour you spend on scheduling logistics — texting clients back and forth, tracking who's paid, reminding people about tomorrow's session — is an hour you're not training, recovering, or building your business. The solution is automation.
+    relatedTools: ["honeybook", "bonsai"],
+    content: `Every hour you spend on admin logistics — texting clients back and forth, tracking who's paid, reminding people about tomorrow's session, chasing down signed waivers — is an hour you're not training, recovering, or building your business. The solution is better tools.
 
-With the right scheduling tool, clients can book their own sessions, pay online, complete intake forms, and receive automatic reminders — without any manual effort from you. Here's how to set it up.
+With the right platform, clients can book their own sessions, sign waivers, pay online, and receive automatic reminders — without any manual effort from you. Here's how to set it up.
 
-## Step 1: Choose a Scheduling Tool
+## Step 1: Choose Your Platform
 
-For personal trainers, [Acuity Scheduling](ACUITY_AFFILIATE_URL) is the most popular option, and for good reason. It was built for service-based businesses like yours, with features specifically useful for trainers:
+For personal trainers, two platforms cover the most common needs:
 
-- **Session packages** — Sell a 10-session pack and Acuity tracks how many sessions a client has remaining
-- **Group classes** — Set a participant limit, and Acuity closes bookings when you're full
-- **Intake forms** — Require clients to complete a fitness assessment before their first session
-- **Zoom integration** — Automatically generate a unique meeting link for virtual sessions
+### HoneyBook ($19–$79/month)
 
-Plans start at **$20/month**, which is a fraction of the revenue from even a single additional client per month.
+[HoneyBook](HONEYBOOK_AFFILIATE_URL) is the better choice if you want a complete client management system. It handles scheduling, contracts and waivers, invoicing, and automated follow-up sequences in one platform.
 
-If you also need contracts, waivers, and workflow automation beyond scheduling, [HoneyBook](HONEYBOOK_AFFILIATE_URL) is worth considering. It combines scheduling with a full client management system.
+The automation workflows are particularly valuable for trainers. Set up a sequence that sends a welcome email when a client books, a reminder 48 hours before their first session, and a check-in message after the first month. These workflows run automatically while you're in the gym.
+
+HoneyBook's built-in scheduling syncs with Google and Outlook, so clients can book directly from your booking page without any back-and-forth.
+
+### Bonsai ($25–$79/month)
+
+[Bonsai](BONSAI_AFFILIATE_URL) is a strong alternative if you want a faster setup and built-in time tracking. It ships with contract and waiver templates ready to customize, handles e-signatures, and tracks session hours directly against client invoices.
+
+Bonsai's client portal gives each client a branded space where they can sign documents, view their session history, and pay invoices — which creates a professional experience without requiring you to manage multiple email threads.
 
 ## Step 2: Set Up Your Services
 
-In Acuity, create a service for each session type you offer:
+Create a service entry for each session type you offer:
 - 60-Minute Personal Training Session
 - 90-Minute Performance Assessment
 - Virtual Coaching Call (30 min)
 
-Set the duration, price, and buffer time between sessions (you'll want at least 15 minutes to reset and prepare). Acuity will only show clients the time slots where you're actually free.
+Set the duration, price, and any buffer time between sessions you need. Your platform will only show clients the time slots where you're actually available.
 
-## Step 3: Create a Session Package
+## Step 3: Create Session Packages
 
-Navigate to Packages in Acuity and create your bundle offerings:
+Set up bundle offerings so clients can commit to multiple sessions upfront:
 - 5 Sessions — $XXX (save X%)
 - 10 Sessions — $XXX (save X%)
-- Monthly Membership — $XXX/month, unlimited sessions
+- Monthly Membership — $XXX/month
 
-When a client purchases a package, Acuity automatically tracks the usage and prevents them from booking more than they've paid for.
+When a client purchases a package, the platform tracks usage automatically.
 
 ## Step 4: Set Up Automated Reminders
 
-Enable automatic email and SMS reminders for every appointment. A good sequence for personal training:
+Configure automatic email reminders for every appointment. A good sequence for personal training:
 - Confirmation email immediately after booking
 - Reminder email 48 hours before the session
-- SMS reminder 2 hours before the session
+- Follow-up message after each completed session
 
-Acuity sends all of these automatically. Dramatically reduces no-shows without requiring any effort from you.
+Both HoneyBook and Bonsai send these automatically once configured. Reducing no-shows doesn't require any ongoing effort from you.
 
 ## Step 5: Require Payment or Deposit at Booking
 
-Nothing wastes time more than last-minute cancellations from clients who haven't paid. Connect Acuity to Stripe or PayPal and require payment (or a non-refundable deposit) at the time of booking. This filters out clients who aren't serious and ensures you're compensated if they cancel late.
+Require payment or a non-refundable deposit at the time of booking. This filters out clients who aren't serious and ensures you're compensated if they cancel late. Both platforms accept credit cards and bank transfers directly through the booking flow.
 
-## Step 6: Add a Cancellation Policy
+## Step 6: Collect Waivers and Intake Forms
 
-Set a minimum notice period for cancellations — typically 24 hours. Acuity can enforce this by requiring a payment or deposit when clients book past the cancellation window. Clients who know there's a real cost to canceling are far more likely to show up.
+Both HoneyBook and Bonsai let you send intake forms and liability waivers as part of the client onboarding flow. New clients complete and sign everything before their first session — no printing, no scanning, no chasing signatures.
 
 ## The Result
 
-Once this system is running, your scheduling looks like this: a new client finds your booking page, picks a package, pays, fills out their intake form, and receives all their session details automatically. You wake up the next morning with bookings on your calendar and payments in your account — without a single text message or phone call.
+Once this system is running, your client onboarding looks like this: a prospective client finds your booking page, picks a package, pays, signs their waiver, completes their intake form, and receives all their session details automatically. You wake up with bookings on your calendar and payments in your account — without manual follow-up.
 
-That's the power of scheduling automation for personal trainers.`,
+That's the advantage of the right tools for personal trainers.`,
   },
   {
     slug: "best-software-independent-contractors-2026",
@@ -260,7 +267,7 @@ That's the power of scheduling automation for personal trainers.`,
     updatedAt: "2026-03-15",
     author: "RunToolkit Editorial Team",
     category: "Best Tools",
-    relatedTools: ["jobber", "housecallpro", "dubsado"],
+    relatedTools: ["jobber", "housecallpro"],
     content: `Independent contractors — whether you're in construction, plumbing, electrical, painting, or any other trade — face a common set of business challenges: you need to schedule jobs, quote clients, collect payments, and track expenses, all while actually doing the work. Without the right software, administrative overhead can eat up 10–20% of your working hours.
 
 These are the best software tools for independent contractors in 2026.
@@ -283,14 +290,6 @@ The built-in review request system is particularly useful for contractors, where
 
 Housecall Pro starts at **$49/month** with a 14-day free trial.
 
-## 3. Dubsado — Best for Consultants and Project-Based Contractors
-
-For contractors who work on larger, longer-term projects — interior designers, IT consultants, or specialty contractors with complex scopes — [Dubsado](DUBSADO_AFFILIATE_URL) offers a more CRM-style approach with detailed client management, contracts, and project workflows.
-
-If your work involves discovery calls, detailed proposals, phased payments, and ongoing client relationships, Dubsado handles that complexity better than field service software like Jobber.
-
-Dubsado starts at **$20/month** for unlimited clients.
-
 ## Key Features Independent Contractors Need
 
 **Professional quoting** — Send detailed, branded quotes that clients can approve online. This sets a professional tone from the first interaction.
@@ -309,94 +308,100 @@ QuickBooks is an excellent accounting tool, but it's not designed for managing t
 
 ## Bottom Line
 
-For most independent contractors in the trades, [Jobber](JOBBER_AFFILIATE_URL) is the best all-around solution. For those who want simplicity, [Housecall Pro](HOUSECALL_PRO_AFFILIATE_URL) is a strong alternative. Project-based contractors and consultants should evaluate [Dubsado](DUBSADO_AFFILIATE_URL).`,
+For most independent contractors in the trades, [Jobber](JOBBER_AFFILIATE_URL) is the best all-around solution. For those who want simplicity, [Housecall Pro](HOUSECALL_PRO_AFFILIATE_URL) is a strong alternative.`,
   },
   {
-    slug: "honeybook-vs-dubsado-complete-comparison",
-    title: "HoneyBook vs Dubsado: The Complete Comparison",
+    slug: "honeybook-vs-bonsai-complete-comparison",
+    title: "HoneyBook vs Bonsai: Which Is Better for Freelancers?",
     description:
-      "HoneyBook and Dubsado are the two most popular CRM tools for creative freelancers. This detailed comparison breaks down pricing, features, and which is right for your business.",
+      "HoneyBook and Bonsai both serve creative freelancers with contracts, invoicing, and client management. This comparison breaks down pricing, features, and which is right for your business.",
     publishedAt: "2026-02-22",
-    updatedAt: "2026-03-18",
+    updatedAt: "2026-03-20",
     author: "RunToolkit Editorial Team",
     category: "Comparisons",
-    relatedTools: ["honeybook", "dubsado"],
-    content: `If you're a photographer, designer, wedding planner, or freelancer shopping for a CRM, you've almost certainly come across [HoneyBook](HONEYBOOK_AFFILIATE_URL) and [Dubsado](DUBSADO_AFFILIATE_URL). Both tools serve creative service businesses, both include contracts, invoicing, and workflow automation, and both have passionate fan bases. So how do you choose?
-
-This comparison breaks down every major dimension so you can make the right call.
+    relatedTools: ["honeybook", "bonsai"],
+    content: `If you're a photographer, designer, coach, or freelancer shopping for a platform to manage clients and contracts, [HoneyBook](HONEYBOOK_AFFILIATE_URL) and [Bonsai](BONSAI_AFFILIATE_URL) are two of the strongest options on the market. Both serve creative freelancers, both include contracts, invoicing, and client management — but they have different strengths. Here's a complete breakdown to help you choose.
 
 ## Pricing
 
 **HoneyBook** offers three plans:
-- Starter: $19/month (unlimited clients, core features)
-- Essentials: $39/month (automations, scheduler, QuickBooks)
-- Premium: $79/month (priority support, multiple companies)
+- Starter: $19/month — unlimited clients, contracts, invoices, proposals
+- Essentials: $39/month — adds automations, scheduler, QuickBooks sync
+- Premium: $79/month — priority support, multiple companies, onboarding specialist
 
-**Dubsado** offers two plans:
-- Starter: Free (limited to 3 clients — genuinely useful for testing)
-- Premier: $20/month or $200/year (unlimited clients, full features)
+**Bonsai** offers:
+- Starter: $25/month — contracts, invoices, proposals, time tracking
+- Professional: $39/month — client portal, subcontractors, multiple currencies
+- Business: $79/month — multiple team members, accountant access
 
-On price alone, Dubsado is more affordable — especially the annual plan. HoneyBook's Starter plan is comparable in price but includes fewer features than Dubsado Premier.
+HoneyBook has a slightly lower entry price at $19/month. At the mid tier, both land at $39/month with different emphasis: HoneyBook gives you automation workflows; Bonsai gives you a client portal and subcontractor support.
 
-**Winner:** Dubsado for value; HoneyBook if you need the Premium tier features.
+**Winner:** HoneyBook on entry price; roughly tied at mid tier.
 
 ## Ease of Setup
 
-**HoneyBook** is significantly easier to set up. The onboarding is guided, the templates are high quality, and you can have a functional workflow running within an hour or two. The interface is modern and intuitive.
+**HoneyBook** has a well-guided onboarding experience with templates specifically designed for photographers, planners, and designers. Most users can have a working proposal and contract workflow running within a few hours.
 
-**Dubsado** has a steeper learning curve. The workflow builder is powerful but requires more time to understand. Most users recommend setting aside a full day for initial setup. The reward is a more customized system — but the investment is real.
+**Bonsai** is also easy to set up — arguably even simpler. The platform has fewer configuration decisions to make, and the contract templates are pre-drafted and ready to customize. If you want to send your first contract today, Bonsai gets you there faster.
 
-**Winner:** HoneyBook for getting started quickly.
+**Winner:** Slight edge to Bonsai for raw speed of initial setup; HoneyBook for guided onboarding.
 
 ## Client Experience
 
-**HoneyBook** produces the most polished client-facing experience. Proposals are beautiful, the signing experience is smooth, and everything feels premium. This matters if your brand positioning is high-end.
+**HoneyBook** produces a more polished, branded client-facing experience. Proposals are visually impressive, the signing and payment flow is smooth, and the overall feel is premium. If your brand is positioned at the higher end of the market, HoneyBook looks the part.
 
-**Dubsado**'s client portal is functional and branded, but less visually refined than HoneyBook. The signing experience works well, but the overall aesthetic is plainer.
+**Bonsai** creates a clean, professional client experience — not quite as visually striking as HoneyBook, but modern and streamlined. The client portal (available on Professional and up) lets clients log in to view documents, sign contracts, and pay invoices in one place.
 
-**Winner:** HoneyBook for client-facing polish.
+**Winner:** HoneyBook for visual polish; Bonsai for portal functionality.
 
-## Automation and Workflows
+## Contracts and Templates
 
-**Dubsado** has the edge in workflow depth. You can trigger automations based on more conditions, chain more complex multi-step sequences, and customize every email and form in the sequence. Power users who want to automate every aspect of their client process will find more flexibility here.
+**HoneyBook** has highly customizable contracts and proposals. You can build exactly what you need, embed contracts into larger proposal documents, and create templates for every service type.
 
-**HoneyBook**'s automations are excellent for most users but have fewer trigger options and slightly less complexity. For photographers and planners with a fairly standard process, HoneyBook's automations are more than sufficient.
+**Bonsai** ships with professionally drafted contract templates for dozens of freelance niches — photography, design, consulting, coaching, and more. If you want a legally sound contract without starting from scratch or consulting a lawyer, Bonsai's templates are a genuine advantage. Both platforms support e-signatures.
 
-**Winner:** Dubsado for power users; HoneyBook for most people.
+**Winner:** Bonsai for ready-to-use niche templates; HoneyBook for customization depth.
 
-## Scheduling
+## Time Tracking
 
-**HoneyBook** includes a scheduling tool on the Essentials plan that syncs with Google and Outlook. Clients can book directly from your HoneyBook page.
+**Bonsai** has built-in time tracking tied directly to projects and invoices. Start a timer, track hours against a project, and convert them to an invoice with one click. For freelancers who bill by the hour — designers, consultants, coaches — this is a meaningful feature that HoneyBook lacks.
 
-**Dubsado** also includes a scheduler on the Premier plan. It's functional but slightly less polished than HoneyBook's.
+**HoneyBook** does not include built-in time tracking. You'd need to use a separate tool like Toggl or Harvest alongside it.
 
-Neither tool matches the scheduling depth of [Acuity Scheduling](ACUITY_AFFILIATE_URL), which remains the best dedicated scheduling option if that's your primary need.
+**Winner:** Bonsai, clearly.
 
-**Winner:** Slight edge to HoneyBook.
+## Automation Workflows
 
-## Integrations
+**HoneyBook**'s automation builder is one of its strongest features. Trigger automated emails, payment reminders, follow-up sequences, and task creation based on client actions. For photographers and planners with a consistent client process, these workflows can save hours every week once configured.
 
-Both tools integrate with QuickBooks, Stripe, PayPal, and Google Calendar. HoneyBook's QuickBooks sync is included on Essentials and above. Dubsado's is available on all paid plans.
+**Bonsai** has more limited automation. You can set up payment reminders and some follow-up actions, but the workflow depth doesn't match HoneyBook's automation engine.
 
-HoneyBook has more native integrations overall. Dubsado uses Zapier to connect with third-party tools.
+**Winner:** HoneyBook by a meaningful margin.
 
-**Winner:** HoneyBook for integrations.
+## Tax Tools
+
+**Bonsai** includes a built-in tax estimation feature — a genuine differentiator for freelancers who struggle with quarterly taxes. The platform tracks income, estimates what you owe in taxes each quarter, and can automatically set aside the appropriate percentage. This is functionality you'd otherwise pay a separate app or accountant for.
+
+**HoneyBook** integrates with QuickBooks but doesn't include tax estimation natively.
+
+**Winner:** Bonsai.
 
 ## Who Should Choose Each Tool?
 
 **Choose HoneyBook if:**
-- You want to get up and running quickly
-- Client-facing polish matters to your brand
-- You're a photographer, planner, or designer who wants a polished, guided system
-- You're willing to pay a slightly higher monthly rate for a better out-of-the-box experience
+- You want powerful automation workflows that run your client process on autopilot
+- Client-facing polish and a premium brand experience matter to your business
+- You're a photographer, wedding planner, or creative professional with a complex multi-step client process
+- Built-in scheduling is important to you
 
-**Choose Dubsado if:**
-- You want maximum control and customization
-- You're comfortable investing time in setup
-- You want more complex automation workflows
-- You're cost-conscious and the $20/month Premier plan is appealing
+**Choose Bonsai if:**
+- You bill by the hour and need time tracking integrated with your invoicing
+- You want a fast setup with minimal configuration decisions
+- Tax estimation tools are valuable to you
+- You're a designer, consultant, or coach who wants a focused, all-in-one freelancer tool
+- You want strong contract templates without building them from scratch
 
-Both tools offer free trials, so the best approach is to test whichever appeals to you more. The "best" tool is the one you'll actually use consistently.`,
+Both tools offer free trials. HoneyBook offers 7 days; Bonsai offers 14. The best approach is to try whichever matches your priorities and run a real client through the workflow before committing.`,
   },
   {
     slug: "manage-clients-freelancer-without-spreadsheets",
@@ -407,7 +412,7 @@ Both tools offer free trials, so the best approach is to test whichever appeals 
     updatedAt: "2026-03-18",
     author: "RunToolkit Editorial Team",
     category: "Guides",
-    relatedTools: ["dubsado", "honeybook", "17hats"],
+    relatedTools: ["honeybook", "freshbooks", "bonsai"],
     content: `Most freelancers start with spreadsheets. A tab for clients, a tab for invoices, a tab for follow-ups. It works fine at first — when you have 3 clients. But as your roster grows, the cracks appear. You forget to follow up with a lead. An invoice goes unpaid for weeks because you didn't notice. A returning client asks a question and you can't remember the details of their last project.
 
 The solution is a proper CRM. Here's how to make the switch without losing your mind.
@@ -423,7 +428,7 @@ The term "CRM" (Customer Relationship Management) sounds corporate, but for free
 
 You don't need Salesforce. You need something built for one-person service businesses.
 
-## The Three Best CRMs for Freelancers
+## The Best Tools for Freelancers
 
 ### HoneyBook ($19–$79/month)
 
@@ -431,25 +436,23 @@ You don't need Salesforce. You need something built for one-person service busin
 
 The lead pipeline view shows every prospect and client in a visual board. Drag them from "Inquiry" to "Proposal Sent" to "Booked" and see your sales funnel at a glance. This alone is worth the switch from spreadsheets.
 
-HoneyBook is particularly popular with photographers, designers, and wedding vendors.
+HoneyBook is particularly popular with photographers, designers, and wedding vendors. Its automation workflows can handle your entire client communication sequence — from welcome email to payment reminder — without any manual effort.
 
-### Dubsado ($20/month for unlimited clients)
+### Bonsai ($25–$79/month)
 
-[Dubsado](DUBSADO_AFFILIATE_URL) gives you the most control. Every form, email, and workflow is customizable. The lead capture forms can be embedded on your website so that when someone fills out your contact form, they appear automatically in your pipeline — no manual data entry.
+[Bonsai](BONSAI_AFFILIATE_URL) is an excellent alternative for freelancers who want a faster, simpler setup. It ships with professionally drafted contract templates for dozens of niches, built-in time tracking that connects directly to invoicing, and a client portal where clients can sign documents and pay invoices in one place.
 
-The workflow automation is Dubsado's strongest feature. When someone becomes a client, a multi-step sequence can automatically send a welcome email, schedule a kickoff call, request a questionnaire, and schedule a follow-up — all without you doing anything. Once this is set up, your onboarding runs on autopilot.
+Bonsai also includes tax estimation tools that track your income and estimate quarterly tax obligations — genuinely useful for freelancers who dread tax season. If you bill by the hour and want contracts, invoicing, and time tracking in one clean platform, Bonsai is hard to beat.
 
-Dubsado requires more setup time than HoneyBook but offers more customization in return.
+### FreshBooks ($19–$60/month) — For Invoicing and Accounting
 
-### 17hats ($45/month)
+If your primary need is professional invoicing and financial tracking rather than a full CRM, [FreshBooks](FRESHBOOKS_AFFILIATE_URL) deserves a look. It handles the money side of your business with depth: automatic expense categorization, profit and loss reports, time tracking, and clean invoicing that clients can pay online instantly.
 
-[17hats](17HATS_AFFILIATE_URL) is worth considering if you also need basic bookkeeping. It tracks income, expenses, and can generate profit and loss reports — useful if you don't want to pay separately for accounting software.
-
-The CRM and contract features are solid, though less polished than HoneyBook or Dubsado.
+FreshBooks isn't a client management tool in the same sense as HoneyBook or Bonsai — it doesn't manage proposals or contracts — but as a financial layer for your freelance business, it's one of the best options available.
 
 ## How to Migrate from Spreadsheets
 
-**Step 1:** Export your existing client list and import it into your chosen CRM. Most tools accept a CSV upload.
+**Step 1:** Export your existing client list and import it into your chosen tool. Most accept a CSV upload.
 
 **Step 2:** Create your service packages with pricing so you can build invoices quickly.
 
@@ -457,7 +460,7 @@ The CRM and contract features are solid, though less polished than HoneyBook or 
 
 **Step 4:** Build a contract template from your existing agreement.
 
-**Step 5:** Send your next proposal or invoice through the CRM rather than manually.
+**Step 5:** Send your next proposal or invoice through the platform rather than manually.
 
 You don't need to migrate everything at once. Start using the tool for new clients and migrate historical data gradually. Within a month, you'll wonder how you ever managed with spreadsheets.
 
@@ -538,81 +541,87 @@ Housecall Pro starts at **$49/month** with a 14-day free trial.
 For most field service businesses, [Jobber](JOBBER_AFFILIATE_URL) or [Housecall Pro](HOUSECALL_PRO_AFFILIATE_URL) will be the right choice depending on your team size and priorities. Both offer free trials, so you can test them with real jobs before committing.`,
   },
   {
-    slug: "dubsado-review-2026",
-    title: "Dubsado Review 2026: Is It Worth It?",
+    slug: "bonsai-review-2026",
+    title: "Bonsai Review 2026: Is It Worth It for Freelancers?",
     description:
-      "Dubsado is one of the most popular CRM tools for freelancers, but is it right for your business? This in-depth 2026 review covers pricing, features, pros and cons, and who it's best for.",
+      "Bonsai promises to replace your contracts, invoices, and time tracking tools in one platform. This 2026 review covers pricing, features, pros and cons, and who it's best for.",
     publishedAt: "2026-03-10",
-    updatedAt: "2026-03-18",
+    updatedAt: "2026-03-20",
     author: "RunToolkit Editorial Team",
     category: "Reviews",
-    relatedTools: ["dubsado", "honeybook"],
-    content: `Dubsado has become one of the most talked-about CRM platforms for creative freelancers, photographers, designers, and coaches. With its reputation for deep customization and powerful automation, it attracts a devoted following — but also a fair share of users who find it overwhelming.
+    relatedTools: ["bonsai", "honeybook"],
+    content: `Bonsai has built a loyal following among freelancers — designers, photographers, consultants, and coaches — who want contracts, invoicing, and time tracking in a single platform without the complexity of a full CRM. But is it worth paying for in 2026?
 
-So is Dubsado worth it in 2026? Here's our complete review.
+Here's our complete review.
 
-## What Is Dubsado?
+## What Is Bonsai?
 
-Dubsado is a client management platform for service-based businesses. It combines CRM functionality (lead tracking, client records, communications) with project management tools (forms, contracts, questionnaires, invoices) and workflow automation.
+Bonsai is an all-in-one business management platform designed specifically for freelancers. The core loop it's built around: win a client, send a contract, track your time, send an invoice, get paid. It handles that entire sequence — and a few extras — from one dashboard.
 
-The core idea: instead of jumping between email, Google Docs, a payment app, and a calendar, you manage the entire client relationship from one platform.
+Unlike HoneyBook, which is designed for a broader range of creative businesses, Bonsai keeps its focus tight on the freelancer workflow. That focus shows in how clean and intuitive the platform feels.
 
 ## Pricing
 
-Dubsado's pricing is straightforward:
+Bonsai offers three plans:
 
-- **Free (Starter):** Limited to 3 clients — genuinely useful for testing
-- **Premier:** $20/month or $200/year (unlimited clients, full features)
+- **Starter: $25/month** — contracts, invoices, proposals, time tracking
+- **Professional: $39/month** — adds client portal, subcontractors, multiple currencies
+- **Business: $79/month** — adds multiple team members, accountant access
 
-At $20/month, Dubsado is one of the most affordable full-featured CRMs on the market. HoneyBook's comparable plan is $39/month, and it includes fewer automation options.
+There's a 14-day free trial with no credit card required, which is one of the better trial offers in this category.
+
+Compared to HoneyBook (which starts at $19/month), Bonsai is slightly more expensive at entry but includes time tracking that HoneyBook doesn't have.
 
 ## Features We Like
 
-**Workflow Automation**
-Dubsado's workflow builder is its crown jewel. You can create multi-step automated sequences triggered by client actions — a lead fills out your inquiry form, Dubsado automatically sends a branded response, schedules a consultation, sends a proposal, and requests a contract signature. Once built, these workflows run completely on their own.
+**Contract Templates**
+This is Bonsai's standout feature. The platform ships with professionally drafted contracts for dozens of freelance niches — photography, graphic design, web development, consulting, coaching, and more. These aren't generic templates you'd find online; they're niche-specific, legally sound documents you can customize and start using immediately.
 
-**Custom Forms and Templates**
-Every form — contact forms, questionnaires, intake forms — is fully customizable. You can embed lead capture forms on your website that pipe directly into your Dubsado pipeline.
+Clients sign electronically, receive a PDF copy automatically, and the contract is stored in Bonsai's system. No back-and-forth email attachments, no printing and scanning.
 
-**Lead Pipeline**
-The visual pipeline view shows every lead and client at each stage of your process. This helps you see at a glance how many active proposals you have, which leads need follow-up, and where your pipeline is healthy or thin.
+**Built-In Time Tracking**
+Bonsai's time tracking is genuinely well integrated. Start a timer from a project page, assign it to a client, and when it's time to invoice, those hours appear as line items with one click. For freelancers who bill by the hour, this is the feature that justifies the subscription on its own.
 
-**Payment Plans and Scheduling**
-Dubsado handles complex payment schedules — deposit at booking, balance before delivery, or any custom split. The scheduler lets clients book appointments based on your real availability.
+**Tax Estimation Tools**
+Few freelancer platforms include tax tools, but Bonsai does. The platform estimates your quarterly tax obligations based on your income, shows you what you likely owe, and can automatically set aside a percentage of each payment to cover it. For freelancers who have been blindsided by a tax bill in April, this is a real value-add.
 
 **Client Portal**
-Each client gets a branded portal where they can view their project, access files you've shared, sign documents, and pay invoices. It creates a professional impression even for solo freelancers.
+Available on the Professional plan and up, the client portal gives each client a branded space where they can view their project, sign documents, and pay invoices — without needing to dig through email threads. It creates a polished impression even for solo freelancers.
 
-## Where Dubsado Falls Short
+**Project and Task Management**
+Bonsai includes basic project tracking: create a project, add tasks, track progress, and see how actual hours compare to the budgeted scope. It's not a full project management tool like Asana, but for straightforward freelance projects it covers the bases.
 
-**Setup Time**
-Dubsado requires a significant time investment to configure properly. Most users report spending 8–20 hours on initial setup — building workflow templates, email canned responses, forms, and contract templates. If you want something running this week, look at HoneyBook instead.
+## Where Bonsai Falls Short
 
-**Interface Design**
-The interface works well but looks dated compared to HoneyBook. The client-facing experience is functional but less visually polished.
+**Automation Workflows**
+Bonsai's automation is more limited than HoneyBook's. You can set up payment reminders and a handful of triggered actions, but you won't find the multi-step workflow builder that HoneyBook users rely on. If you want your entire client communication sequence automated — welcome emails, session reminders, delivery follow-ups — HoneyBook is the stronger choice.
 
-**No Time Tracking**
-Dubsado doesn't include built-in time tracking, which is a gap for freelancers who bill by the hour.
+**Integrations**
+Bonsai has fewer third-party integrations than HoneyBook. It connects with Zapier (which opens up most major apps), QuickBooks, and a handful of others — but if you have a specific integration requirement, check the integration list before committing.
 
-## Who Is Dubsado Best For?
+**Not Designed for Field Service**
+Like HoneyBook, Bonsai is built for freelancers who work remotely or in-person on a project basis. It's not suited for field service businesses like landscaping, HVAC, or cleaning companies. Those businesses should look at Jobber or Housecall Pro instead.
 
-Dubsado is ideal for:
-- Photographers, designers, and coaches who want a fully customized client system
-- Freelancers who are willing to invest time in setup for long-term automation benefits
-- Budget-conscious freelancers who want maximum features at minimum cost
-- Businesses with a consistent, repeatable client process that benefits from automation
+## Who Is Bonsai Best For?
 
-Dubsado is less ideal for:
-- Field service businesses (HVAC, landscaping, cleaning) — use Jobber or Housecall Pro instead
-- People who want something polished and ready immediately
+Bonsai is ideal for:
+- Photographers, designers, writers, and consultants who need contracts alongside invoicing
+- Freelancers who bill by the hour and want time tracking integrated with their invoices
+- Solo freelancers who want a fast, clean setup without a long configuration process
+- Anyone who wants tax estimation tools to stay on top of quarterly obligations
 
-## Is Dubsado Worth It in 2026?
+Bonsai is less ideal for:
+- Freelancers who want deep automation workflows (consider HoneyBook)
+- Field service businesses (consider Jobber or Housecall Pro)
+- Teams with multiple employees who need robust project management
 
-Yes — with a caveat. If you're willing to invest the setup time, [Dubsado](DUBSADO_AFFILIATE_URL) at $20/month delivers exceptional value. The workflow automation alone can save 5–10 hours per month once configured, which is worth multiples of the subscription cost.
+## Is Bonsai Worth It in 2026?
 
-If you're not sure, start with the free Starter plan and test it with your first 3 clients. The free tier is genuinely usable and gives you a realistic sense of how the platform works.
+Yes, for the right freelancer. If you bill by the hour, need solid contract templates, and want one tool that covers your entire freelancer workflow, [Bonsai](BONSAI_AFFILIATE_URL) at $25/month delivers real value. The time tracking alone — integrated directly into invoicing — typically pays for the subscription within the first month.
 
-For those who want a more polished out-of-the-box experience, [HoneyBook](HONEYBOOK_AFFILIATE_URL) is the main alternative worth evaluating.`,
+For freelancers who prioritize a more polished client-facing experience and stronger automation workflows, [HoneyBook](HONEYBOOK_AFFILIATE_URL) remains the main alternative to evaluate.
+
+The 14-day free trial is a no-risk way to test whether Bonsai fits your workflow before committing.`,
   },
   {
     slug: "grow-cleaning-business-with-software",

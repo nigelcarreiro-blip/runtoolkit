@@ -66,9 +66,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ul className="space-y-2 text-sm">
                   <li><Link href="/reviews/jobber" className="hover:text-white transition-colors">Jobber Review</Link></li>
                   <li><Link href="/reviews/honeybook" className="hover:text-white transition-colors">HoneyBook Review</Link></li>
-                  <li><Link href="/reviews/dubsado" className="hover:text-white transition-colors">Dubsado Review</Link></li>
                   <li><Link href="/reviews/housecallpro" className="hover:text-white transition-colors">Housecall Pro Review</Link></li>
-                  <li><Link href="/reviews/acuity" className="hover:text-white transition-colors">Acuity Scheduling Review</Link></li>
+                  <li><Link href="/reviews/freshbooks" className="hover:text-white transition-colors">FreshBooks Review</Link></li>
+                  <li><Link href="/reviews/bonsai" className="hover:text-white transition-colors">Bonsai Review</Link></li>
                 </ul>
               </div>
               <div>
@@ -85,8 +85,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Compare</h3>
                 <ul className="space-y-2 text-sm">
                   <li><Link href="/compare/jobber-vs-housecall-pro" className="hover:text-white transition-colors">Jobber vs Housecall Pro</Link></li>
-                  <li><Link href="/compare/honeybook-vs-dubsado" className="hover:text-white transition-colors">HoneyBook vs Dubsado</Link></li>
-                  <li><Link href="/compare/jobber-vs-dubsado" className="hover:text-white transition-colors">Jobber vs Dubsado</Link></li>
+                  <li><Link href="/compare/honeybook-vs-bonsai" className="hover:text-white transition-colors">HoneyBook vs Bonsai</Link></li>
+                  <li><Link href="/compare/freshbooks-vs-bonsai" className="hover:text-white transition-colors">FreshBooks vs Bonsai</Link></li>
                   <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                 </ul>
               </div>
