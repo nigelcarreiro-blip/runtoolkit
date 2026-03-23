@@ -22,7 +22,7 @@ export const tools: Record<string, Tool> = {
     slug: "jobber",
     tagline: "Field service management for home service businesses",
     rating: 4.8,
-    affiliateUrl: "JOBBER_AFFILIATE_URL",
+    affiliateUrl: "https://go.getjobber.com/gvvrh6ea5qsa",
     logo: "/logos/jobber.svg",
     category: "field-service",
     pricing: "Starting at $49/month",
